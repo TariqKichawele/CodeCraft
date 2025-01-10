@@ -6,6 +6,7 @@ import Link from 'next/link'
 import { SignedIn } from '@clerk/nextjs'
 import { Code2, Blocks, Sparkles } from 'lucide-react'
 import HeaderProfileBtn from './HeaderProfileBtn'
+import ThemeSelector from './ThemeSelector'
 
 const Header = async () => {
     const convex = new ConvexHttpClient(process.env.NEXT_PUBLIC_CONVEX_URL!)
@@ -14,8 +15,6 @@ const Header = async () => {
     const convexUser = await convex.query(api.users.getUser, {
         userId: user?.id || "",
     });
-
-
 
   return (
     <div className="relative z-10">
@@ -71,7 +70,7 @@ const Header = async () => {
 
             <div className="flex items-center gap-4">
                 <div className="flex items-center gap-3">
-                    Theme Selector
+                    <ThemeSelector />
                 </div>
 
                 {!convexUser?.isPro && (
