@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from './_components/Header'
 import EditorPanel from './_components/EditorPanel'
+import OutputPanel from './_components/OutputPanel'
 
 const Home = () => {
   return (
@@ -10,7 +11,7 @@ const Home = () => {
 
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
           <EditorPanel />
-          Output Panel
+          <OutputPanel />
         </div>
       </div>
     </div>

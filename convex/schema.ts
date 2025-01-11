@@ -23,7 +23,7 @@ export default defineSchema({
     snippets: defineTable({
         userId: v.string(),
         title: v.string(),
-        langauge: v.string(),
+        language: v.string(),
         code: v.string(),
         userName: v.string()
     }).index("by_user_id", ["userId"]),

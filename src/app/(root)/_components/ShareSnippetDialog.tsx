@@ -2,6 +2,7 @@ import { useCodeEditorStore } from '@/store/useCodeEditorStore';
 import { X } from 'lucide-react';
 import React, { useState } from 'react'
 import toast from 'react-hot-toast';
+import { createSnippet } from '../../../../convex/snippet';
 
 const ShareSnippetDialog = ({ onClose } : { onClose: () => void }) => {
     const [ title, setTitle ] = useState('');
