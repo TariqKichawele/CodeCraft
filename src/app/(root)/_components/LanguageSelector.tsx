@@ -8,7 +8,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { ChevronDownIcon, Lock, Sparkles } from "lucide-react";
 import Image from 'next/image';
 
-const LanguageSelector = ({ hasAccess }: { hasAccess: boolean }) => {
+const LanguageSelector = ({ hasAccess } : { hasAccess: boolean }) => {
     const [ isOpen, setIsOpen ] = useState(false);
     const mounted = useMounted();
 
@@ -106,9 +106,9 @@ const LanguageSelector = ({ hasAccess }: { hasAccess: boolean }) => {
                                     >
                                         <button
                                             className={`
-                                            relative w-full flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all duration-200
-                                            ${language === lang.id ? "bg-blue-500/10 text-blue-400" : "text-gray-300"}
-                                            ${isLocked ? "opacity-50" : "hover:bg-[#262637]"}
+                                                relative w-full flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all duration-200
+                                                ${language === lang.id ? "bg-blue-500/10 text-blue-400" : "text-gray-300"}
+                                                ${isLocked ? "opacity-50" : "hover:bg-[#262637]"}
                                             `}
                                             onClick={() => handleLanguageSelect(lang.id)}
                                             disabled={isLocked}
